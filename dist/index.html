@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firebase9</title>
+    <link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    
+   
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form  class = "signup" action="#">
+			<h1>Create Account</h1>
+			<!-- <div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div> -->
+			<!-- <span>or use your email for registration</span> -->
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" name = "email" />
+			<input type="password" placeholder="Password"  name = "password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form class = "login" action="#">
+			<h1>Sign in</h1>
+			<!-- <div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div> -->
+			<!-- <span>or use your account</span> -->
+			<input type="email" placeholder="Email"  name = "email" />
+			<input type="password" placeholder="Password"  name = "password" />
+			<a href="#">Forgot your password?</a>
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class = "game hide">
+	<header id = "navbar">
+		 
+		<button class = "logout"> <i id = "lo" class="fas fa-sign-out-alt"></i> logout </button>
+        </i></button> 
+        <div>
+        <div> Time :
+             </div>
+             <div  > <span id =  "time"> 00:00 </span> </div>
+        </div>
+    </header>
+    <main id = "startpage"    >
+        <div id = "box"  >
+      
+    
+        <div class="game-container">
+			<img id = "oimage" src="queen.png" alt="Your game image description here">
+			<div class="game-description">
+			  <h2> "Grace's Quest: The Journey to Freedom"
+			</h2>
+			  <p>Greetings, my loyal subjects. As you know, I am Queen Grace, and I take great pride in my knowledge and intellect. However, I am also known for my fairness and justice, and I believe that everyone deserves a chance to prove themselves. That is why I have created a puzzle game that will test your knowledge of me and offer you a chance to earn your freedom. You will have to answer 10 questions about me based on 3 hints and with only 3 attempts for each question. If you answer all the questions correctly, I will grant you your freedom, and you will be free to live your life as you please.You will have to use your problem-solving skills to decipher the hints and answer the questions correctly. With each correct answer, you will move closer to your goal of freedom. But with every incorrect answer, you will be one step closer to a life of eternal servitude.</p>
+			  <button id = "butt"  > Start Puzzle </button>
+			</div>
+		  </div>
+        
+        </div>
+        
+        
+      
+    </main>
+    <main id = "questionpage" class = "hide" >
+        <div id = "box" >
+        <!-- <h1 id = "question"> <b> Full form Of CSS </b> </h1>
+        <span class = "option"> 1.CSS </span>
+        <span class = "option"> 2.HTML</span>
+        <span class = "option"> 3.JAVASCRIPT </span>
+        
+
+		 <input id = "useranswer" type = "text">
+		 <button id = "answersubmit"> submit </button>
+
+        <p id = "status" ></p> -->
+				<div id = "top"> 
+					<i  id = "hrt" class="fas fa-heart"></i> 
+					<span id = "live"> :4</span>
+				<button id = "restartbutton2" class="restart-btn">
+					<i id = "rst" class="fas fa-redo"></i>  Restart    </button>
+						
+			</div>
+			    <h1 id = "question"> Who is my favorite sportsperson </h1>
+				<h2 class = "option"> Hint 1 : Sportsperson plays cricket </h2>
+				<h2 class = "option"> Hint 2 : Sportperson hails from australia</h2>
+				<h2 class = "option"> Hint 3 : He captained it </h2>
+				<!-- <input>  -->
+				
+				
+				 <div>
+				<input id = "useranswer" >
+				<button type = "submit"  id = "answersubmit"> submit </button>
+			</div>
+				<p id = "status" ></p> 
+       
+        
+        </div>
+        
+        
+      
+    </main>
+    <main id = "scorecard" class = "hide"  >
+        <div id = "box" >
+           <h1> <b> ALL DONE </h1>
+           <p id = "sco" > Your final score is 0 </p>
+           
+		   <button id = "restartbutton" > restart </button>
+        </div>
+        
+        
+      
+    </main>
+    
+
+
+
+
+</div>
+<div class="hide" id = "admin-dashboard">
+<button id = "logoutadmin"> logout </button>
+<div class="admin-dashboard-header">
+		Admin Dashboard
+	  </div>
+<table id="admin-dashboard-table">
+	<!-- <header id = "navbar">
+		 
+		<button class = "logout"> <i id = "logoutadmin" class="fas fa-sign-out-alt"></i> logout </button>
+        </i></button> 
+        <div>
+       
+    </header> -->
+	
+	
+	  
+	<thead>
+	  <tr>
+		<th>Email</th>
+		<th>Win Status</th>
+		<th>Time Taken</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <!-- Table rows will be added dynamically with JavaScript -->
+	</tbody>
+  </table>
+</div>
+
+<script src = "bundle.js" >  </script>
+</body>
+</html>
